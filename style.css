@@ -1,0 +1,11 @@
+body {
+  height: 100vh;
+  background-color: blanchedalmond;
+  display: flex;
+  align-items: center;
+}
+h1 {
+  color: blue;
+  text-align: center;
+  width: 100%;
+}
