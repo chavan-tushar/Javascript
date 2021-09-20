@@ -1,4 +1,4 @@
-alert("Hello World!");
+//alert("Hello World!");
 
 let country = "Ireland";
 let continent = "Europe";
@@ -15,3 +15,5 @@ console.log(`Country is ${country}, it is in ${continent} continent and has a po
 // 6. Symbol : Value that is unique and cannot be changed
 // 7. BigInt : Numeric value which is large and cannot be stored in Number. 
 //
+
+console.log(typeof(country))
