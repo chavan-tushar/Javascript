@@ -66,4 +66,34 @@ console.log('1990'-15); //output - 1975
 console.log(Boolean(0), Boolean(NaN), Boolean(''), Boolean(undefined), Boolean(null)); // output will be false
 console.log(Boolean(1));
 
+// User Input
+
+const favNumb = Number(prompt("Please enter your fav number"));
+
+if(favNumb === 23){
+    console.log("You have entered number 23!");
+} else if(favNumb === 9){
+    console.log("You have entered number 9!");
+} else{
+    console.log("You havent entered number 9 or 23!")
+}
+
+if (favNumb !== 9) console.log("Why not 9");
+
+let avgDolphins = ((97+112+101) / 3);
+let avgKoalas = ((109+95+106) / 3);
+
+console.log(avgDolphins, avgKoalas)
+
+if ((avgDolphins > avgKoalas) && avgDolphins >= 100){
+    console.log("Dolphins are winner")
+}else if((avgKoalas > avgDolphins) && avgKoalas >=100){
+    console.log("Koalas are the winner")
+}else if ((avgKoalas === avgKoalas) && avgKoalas >= 100){
+    console.log("There is a tie!")
+}else{
+    console.log("No team wins the trophy !")
+}
+
+
 
