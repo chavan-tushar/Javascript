@@ -1,8 +1,10 @@
 //alert("Hello World!");
-
+'use strict';
 const country = "Ireland";
 const continent = "Europe";
 let population = "1.2 Crores";
+let county = 'india';
+count = 'ireland';
 
 console.log(`Country is ${country}, it is in ${continent} continent and has a population ${population}`);
 
@@ -95,5 +97,35 @@ if ((avgDolphins > avgKoalas) && avgDolphins >= 100){
     console.log("No team wins the trophy !")
 }
 
+// Switch Cases:
 
+const enteredDay = prompt("Please enter day!");
 
+switch (enteredDay.toLowerCase()){
+    case "monday":
+        console.log("Its monday!");
+        break;
+    case "tuesday":
+        console.log("Its tuesday!");
+        break;
+    case "wednesday":
+        console.log("Its wednesday!");
+        break;
+    case "thursday":
+        console.log("Its thursday!");
+        break;
+    case "friday":
+        console.log("Its friday!");
+        break;
+    default:
+        console.log("Its weeked!");
+        break;
+}
+
+const name = prompt("Boy or Girl") === "Boy" ? "Ishan" : "Ishna";
+console.log(`${name}`);
+
+const billAmt = 430 ;
+const tip = billAmt >=50 && billAmt <= 300 ? billAmt * 0.15 : billAmt * 0.20; 
+
+console.log(`The bill was ${billAmt}, the tip was ${tip}, and the total value ${billAmt + tip}`);
