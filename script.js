@@ -131,30 +131,31 @@ const tip = billAmt >=50 && billAmt <= 300 ? billAmt * 0.15 : billAmt * 0.20;
 console.log(`The bill was ${billAmt}, the tip was ${tip}, and the total value ${billAmt + tip}`);
 
 
-//Functions
-
+//Functions - There are 3 types of functions. Function Declaration, Funtion Expression and Arrow Function. 
 //1. Function Declaration:
-function fruitJuicer(apple, orange){
-    if (apple || orange){
-        const juice = `Juice with ${apple} apples and ${orange} oranges is ready`;
-        return juice;
-    }else{
-        return `Please check arguments.`
-    }
-    
-}
-
-const appleJuice = fruitJuicer(2,0);
-console.log(appleJuice);
-
-const appleOrangeJuice = fruitJuicer(3,4);
-console.log(appleOrangeJuice);
-
-const noArguments = fruitJuicer(0,0);
-console.log(noArguments);
-
-//2. Function Expression:
-const calcAge1 = function (birthYear){
+function calcAge1(birthYear){
     return 2021 - birthYear;
 }
-console.log(calcAge1(Number(prompt('Please enter birthYear.'))));
+const age1 = calcAge1(Number(prompt(`Please enter your BirthYear!`)));
+console.log(`Age using Function declaration is ${age1}`);
+
+//2. Function Expression:
+const calcAge2 = function (birthYear){
+    return 2021 - birthYear;
+}
+const age2 = calcAge2(Number(prompt('Please enter birthYear.')));
+console.log(`Age using Function Expression is ${age2}`);
+
+//3. Arrow Function: Special Form of function expression. 
+const calcAge3 = birthYear => 2021 - birthYear;
+const age3 = calcAge3(Number(prompt('Please enter birthYear.')));
+console.log( `Age using Arrow Function is ${age3}`);
+
+//4. Arrow Function with multiple arguments and statements.
+const yearsUntilRetirement = (birthYear,firstName) => {
+    const age4 = 2021 - birthYear;
+    const yearsLeft = 65 - age4;
+    return `Hello ${firstName}, years left for your retirement are ${yearsLeft} !`;
+}
+console.log(yearsUntilRetirement(1990, "Tushar"));
+
