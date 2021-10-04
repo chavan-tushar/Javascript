@@ -4,7 +4,7 @@ const country = "Ireland";
 const continent = "Europe";
 let population = "1.2 Crores";
 let county = 'india';
-count = 'ireland';
+county = 'ireland';
 
 console.log(`Country is ${country}, it is in ${continent} continent and has a population ${population}`);
 
@@ -129,3 +129,32 @@ const billAmt = 430 ;
 const tip = billAmt >=50 && billAmt <= 300 ? billAmt * 0.15 : billAmt * 0.20; 
 
 console.log(`The bill was ${billAmt}, the tip was ${tip}, and the total value ${billAmt + tip}`);
+
+
+//Functions
+
+//1. Function Declaration:
+function fruitJuicer(apple, orange){
+    if (apple || orange){
+        const juice = `Juice with ${apple} apples and ${orange} oranges is ready`;
+        return juice;
+    }else{
+        return `Please check arguments.`
+    }
+    
+}
+
+const appleJuice = fruitJuicer(2,0);
+console.log(appleJuice);
+
+const appleOrangeJuice = fruitJuicer(3,4);
+console.log(appleOrangeJuice);
+
+const noArguments = fruitJuicer(0,0);
+console.log(noArguments);
+
+//2. Function Expression:
+const calcAge1 = function (birthYear){
+    return 2021 - birthYear;
+}
+console.log(calcAge1(Number(prompt('Please enter birthYear.'))));
