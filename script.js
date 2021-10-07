@@ -199,51 +199,70 @@
 // console.log(checkWinner(avgDolphins,avgKoalas));
 
 //Arrays:
-//const familyMembersNew = new Array('Papa', 'Mummy');
-const familyMembers = ['Papa', 'Mummy'];
-console.log(familyMembers.length)
+// //const familyMembersNew = new Array('Papa', 'Mummy');
+// const familyMembers = ['Papa', 'Mummy'];
+// console.log(familyMembers.length)
 
-familyMembers.push('Tushar'); //add element at the end of an array
-console.log(familyMembers);
+// familyMembers.push('Tushar'); //add element at the end of an array
+// console.log(familyMembers);
 
-console.log(familyMembers.push('TusharNew')) //it will output new lenght of an array.
-console.log(familyMembers); 
+// console.log(familyMembers.push('TusharNew')) //it will output new lenght of an array.
+// console.log(familyMembers); 
 
-familyMembers.unshift('Rohini'); //add element at the start of an array
-console.log(familyMembers);
+// familyMembers.unshift('Rohini'); //add element at the start of an array
+// console.log(familyMembers);
 
-console.log(familyMembers.unshift('RohiniNew')); //it will output new length of an array.
-console.log(familyMembers);
+// console.log(familyMembers.unshift('RohiniNew')); //it will output new length of an array.
+// console.log(familyMembers);
 
-familyMembers.pop(); //Removes element from the end of an array
-console.log(familyMembers);
+// familyMembers.pop(); //Removes element from the end of an array
+// console.log(familyMembers);
 
-console.log(familyMembers.pop()); //it will display the element which was removed from an array;
-console.log(familyMembers);
+// console.log(familyMembers.pop()); //it will display the element which was removed from an array;
+// console.log(familyMembers);
 
-familyMembers.shift(); //Removes an element from the start of an array. 
-console.log(familyMembers);
+// familyMembers.shift(); //Removes an element from the start of an array. 
+// console.log(familyMembers);
 
-console.log(familyMembers.shift()) // it will display the element which was removed from an array.
-console.log(familyMembers);
+// console.log(familyMembers.shift()) // it will display the element which was removed from an array.
+// console.log(familyMembers);
 
-console.log(familyMembers.indexOf('Mummy'));
-console.log(familyMembers.includes('Mummy'));
+// console.log(familyMembers.indexOf('Mummy'));
+// console.log(familyMembers.includes('Mummy'));
 
-const calcTip = function(billValue){
-    const tip = billValue >=50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.20;
-    return tip;
-}
+// const calcTip = function(billValue){
+//     const tip = billValue >=50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.20;
+//     return tip;
+// }
 
-// const calcTip = (billValue) => billValue >=50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.20;
+// // const calcTip = (billValue) => billValue >=50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.20;
 
-const bill = [125, 555, 44];
-const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
-const total = [bill[0]+tip[0], bill[1]+tip[1], bill[2]+tip[2]];
+// const bill = [125, 555, 44];
+// const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
+// const total = [bill[0]+tip[0], bill[1]+tip[1], bill[2]+tip[2]];
 
-console.log(`Tip array is [${tip}]`);
-console.log(`Total amount array is [${total}]`);
+// console.log(`Tip array is [${tip}]`);
+// console.log(`Total amount array is [${total}]`);
 
-for(let i=0; i<bill.length; i++){
-    console.log(`Bill amount is ${bill[i]} and tip amount is ${calcTip(bill[i])}`);
-}
+// for(let i=0; i<bill.length; i++){
+//     console.log(`Bill amount is ${bill[i]} and tip amount is ${calcTip(bill[i])}`);
+// }
+
+// Objects - Key and Value Pair.
+// There are many ways to declare objects, declaring object using a key and value pair is one of the way to define object. 
+
+// const ishu = {
+//     firstName : "Ishna",
+//     lastName : "Chavan",
+//     father: "Tushar",
+//     mother: "Rohini",
+//     friends: ['Kavish','Raj','Timu','Granthu']
+// };
+
+// console.log(ishu['firstName']);
+// console.log(`${ishu.firstName} has ${ishu.friends.length} friends and her best friend is ${ishu.friends[0]}`);
+// console.log(ishu.father);
+// ishu.home = "Andheri";
+// ishu['birthdate'] = '7th Oct 2019';
+
+// console.log(ishu);
