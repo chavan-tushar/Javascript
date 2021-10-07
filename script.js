@@ -199,6 +199,7 @@
 // console.log(checkWinner(avgDolphins,avgKoalas));
 
 //Arrays:
+//const familyMembersNew = new Array('Papa', 'Mummy');
 const familyMembers = ['Papa', 'Mummy'];
 console.log(familyMembers.length)
 
