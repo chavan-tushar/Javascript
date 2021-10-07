@@ -229,3 +229,21 @@ console.log(familyMembers);
 
 console.log(familyMembers.indexOf('Mummy'));
 console.log(familyMembers.includes('Mummy'));
+
+const calcTip = function(billValue){
+    const tip = billValue >=50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.20;
+    return tip;
+}
+
+// const calcTip = (billValue) => billValue >=50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.20;
+
+const bill = [125, 555, 44];
+const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
+const total = [bill[0]+tip[0], bill[1]+tip[1], bill[2]+tip[2]];
+
+console.log(`Tip array is [${tip}]`);
+console.log(`Total amount array is [${total}]`);
+
+for(let i=0; i<bill.length; i++){
+    console.log(`Bill amount is ${bill[i]} and tip amount is ${calcTip(bill[i])}`);
+}
