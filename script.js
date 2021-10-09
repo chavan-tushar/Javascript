@@ -266,3 +266,57 @@
 // ishu['birthdate'] = '7th Oct 2019';
 
 // console.log(ishu);
+
+const tushar = {
+    firstName:"Tushar",
+    lastName:"Chavan",
+    birthYear:1990,
+    // in an object we can create key value pair of function as well. 
+    calcAge: function(){
+        // in below line we have created a new variable called age and calculated current age and stored in it.
+        this.age = 2021 - this.birthYear;
+        return this.age;
+    },
+    job:"Programmer",
+    hasDriversLicense: true,
+    getSummary: function(){
+        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he ${this.hasDriversLicense?"has a driver license":"doesn't have a driver license."}`
+    }
+}
+
+console.log(tushar.calcAge());
+console.log(tushar.age);
+
+console.log(tushar.getSummary())
+
+
+const Mark = {
+    fullName: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function(){
+        this.BMI= this.mass / this.height**2;
+        return this.BMI;
+    }
+}
+
+const John = {
+    fullName: "John Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function(){
+        this.BMI = this.mass / this.height ** 2;
+        return this.BMI;;
+    }
+}
+
+let higherBMIName;
+let lowerBMIName;
+if(Mark.calcBMI() > John.calcBMI()){
+    higherBMIName = "Mark";
+    lowerBMIName = "John";
+}else{
+    higherBMIName = "John";
+    lowerBMIName = "Mark";
+}
+console.log(`${Mark.calcBMI() > John.calcBMI() ? Mark.fullName : John.fullName}'s BMI (${Mark.BMI > John.BMI ? Mark.calcBMI() : John.calcBMI()}) is higher than ${Mark.BMI > John.BMI ? John.fullName : Mark.fullName}'s (${Mark.BMI > John.BMI ? John.calcBMI() : Mark.calcBMI()})'s `)
