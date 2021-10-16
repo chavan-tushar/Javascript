@@ -1,5 +1,5 @@
-// //alert("Hello World!");
-// 'use strict';
+el; // //alert("Hello World!");
+('use strict');
 // const country = "Ireland";
 // const continent = "Europe";
 // let population = "1.2 Crores";
@@ -13,9 +13,9 @@
 // // 2. String : let myVar = "Tushar";
 // // 3. Boolean : let myVar = true;
 // // 4. Undefined : let myVar;
-// // 5. Null : it also represents empty value. 
+// // 5. Null : it also represents empty value.
 // // 6. Symbol : Value that is unique and cannot be changed
-// // 7. BigInt : Numeric value which is large and cannot be stored in Number. 
+// // 7. BigInt : Numeric value which is large and cannot be stored in Number.
 // //
 
 // console.log(typeof(country));
@@ -57,14 +57,14 @@
 // let age = 2021 - Number(inputBirthYear) ;
 // console.log(`Age is ${age}`);
 
-// // Type Coercion - Is when Javascript automatically convert one type to another. 
-// // When we use plus (+) then number is converted to string. if we use minus (-) then string is converted to numbers. 
+// // Type Coercion - Is when Javascript automatically convert one type to another.
+// // When we use plus (+) then number is converted to string. if we use minus (-) then string is converted to numbers.
 // console.log('1990'+15); //output - 199015
 // console.log('1990'-15); //output - 1975
 
 // // Falsy and truthy values
 // // Falsy values are those values which are not false but when we convert those values to boolean they will become false. e.g. 0, '', NaN, undefined, null
-// // except for these values all other values are truthy values. 
+// // except for these values all other values are truthy values.
 // console.log(Boolean(0), Boolean(NaN), Boolean(''), Boolean(undefined), Boolean(null)); // output will be false
 // console.log(Boolean(1));
 
@@ -126,12 +126,11 @@
 // console.log(`${name}`);
 
 // const billAmt = 430 ;
-// const tip = billAmt >=50 && billAmt <= 300 ? billAmt * 0.15 : billAmt * 0.20; 
+// const tip = billAmt >=50 && billAmt <= 300 ? billAmt * 0.15 : billAmt * 0.20;
 
 // console.log(`The bill was ${billAmt}, the tip was ${tip}, and the total value ${billAmt + tip}`);
 
-
-// //Functions - There are 3 types of functions. Function Declaration, Funtion Expression and Arrow Function. 
+// //Functions - There are 3 types of functions. Function Declaration, Funtion Expression and Arrow Function.
 // //1. Function Declaration:
 // function calcAge1(birthYear){
 //     return 2021 - birthYear;
@@ -146,7 +145,7 @@
 // const age2 = calcAge2(Number(prompt('Please enter birthYear.')));
 // console.log(`Age using Function Expression is ${age2}`);
 
-// //3. Arrow Function: Special Form of function expression. 
+// //3. Arrow Function: Special Form of function expression.
 // const calcAge3 = birthYear => 2021 - birthYear;
 // const age3 = calcAge3(Number(prompt('Please enter birthYear.')));
 // console.log( `Age using Arrow Function is ${age3}`);
@@ -158,7 +157,6 @@
 //     return `Hello ${firstName}, years left for your retirement are ${yearsLeft} !`;
 // }
 // console.log(yearsUntilRetirement(1990, "Tushar"));
-
 
 // const yearsUntilRetirement = (birthYear) => {
 //     const currentAge = 2021 - birthYear;
@@ -175,7 +173,7 @@
 //     const currentAge1 = calcAge(birthYear)
 //     const yearsLeft1 = 65 - currentAge1
 //     return yearsLeft1 < 0 ? 0 : yearsLeft1;
-    
+
 // }
 
 // console.log(yearsUntilRetirement1(1990));
@@ -185,7 +183,6 @@
 
 // const avgDolphins = calcAverage(85,54,41);
 // const avgKoalas = calcAverage(23,34,27);
-
 
 // const checkWinner = function(avgDolphins,avgKoalas){
 //     if (avgDolphins >= (avgKoalas * 2)){
@@ -207,7 +204,7 @@
 // console.log(familyMembers);
 
 // console.log(familyMembers.push('TusharNew')) //it will output new lenght of an array.
-// console.log(familyMembers); 
+// console.log(familyMembers);
 
 // familyMembers.unshift('Rohini'); //add element at the start of an array
 // console.log(familyMembers);
@@ -221,7 +218,7 @@
 // console.log(familyMembers.pop()); //it will display the element which was removed from an array;
 // console.log(familyMembers);
 
-// familyMembers.shift(); //Removes an element from the start of an array. 
+// familyMembers.shift(); //Removes an element from the start of an array.
 // console.log(familyMembers);
 
 // console.log(familyMembers.shift()) // it will display the element which was removed from an array.
@@ -249,7 +246,7 @@
 // }
 
 // Objects - Key and Value Pair.
-// There are many ways to declare objects, declaring object using a key and value pair is one of the way to define object. 
+// There are many ways to declare objects, declaring object using a key and value pair is one of the way to define object.
 
 // const ishu = {
 //     firstName : "Ishna",
@@ -267,56 +264,194 @@
 
 // console.log(ishu);
 
-const tushar = {
-    firstName:"Tushar",
-    lastName:"Chavan",
-    birthYear:1990,
-    // in an object we can create key value pair of function as well. 
-    calcAge: function(){
-        // in below line we have created a new variable called age and calculated current age and stored in it.
-        this.age = 2021 - this.birthYear;
-        return this.age;
-    },
-    job:"Programmer",
-    hasDriversLicense: true,
-    getSummary: function(){
-        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he ${this.hasDriversLicense?"has a driver license":"doesn't have a driver license."}`
-    }
+// const tushar = {
+//     firstName:"Tushar",
+//     lastName:"Chavan",
+//     birthYear:1990,
+//     // in an object we can create key value pair of function as well.
+//     calcAge: function(){
+//         // in below line we have created a new variable called age and calculated current age and stored in it.
+//         this.age = 2021 - this.birthYear;
+//         return this.age;
+//     },
+//     job:"Programmer",
+//     hasDriversLicense: true,
+//     getSummary: function(){
+//         return `${this.firstName} is a ${this.age}-year old ${this.job}, and he ${this.hasDriversLicense?"has a driver license":"doesn't have a driver license."}`
+//     }
+// }
+
+// console.log(tushar.calcAge());
+// console.log(tushar.age);
+
+// console.log(tushar.getSummary())
+
+// const Mark = {
+//     fullName: "Mark Miller",
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function(){
+//         this.BMI= this.mass / this.height**2;
+//         return this.BMI;
+//     }
+// }
+
+// const John = {
+//     fullName: "John Smith",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function(){
+//         this.BMI = this.mass / this.height ** 2;
+//         return this.BMI;;
+//     }
+// }
+
+// let higherBMIName;
+// let lowerBMIName;
+// if(Mark.calcBMI() > John.calcBMI()){
+//     higherBMIName = "Mark";
+//     lowerBMIName = "John";
+// }else{
+//     higherBMIName = "John";
+//     lowerBMIName = "Mark";
+// }
+// console.log(`${Mark.calcBMI() > John.calcBMI() ? Mark.fullName : John.fullName}'s BMI (${Mark.BMI > John.BMI ? Mark.calcBMI() : John.calcBMI()}) is higher than ${Mark.BMI > John.BMI ? John.fullName : Mark.fullName}'s (${Mark.BMI > John.BMI ? John.calcBMI() : Mark.calcBMI()})'s `)
+
+// const atul = {
+//     fisrtName : "Atul",
+//     lastName: "Surve",
+//     wife:"Vrushali",
+//     favSports : ['football','cricket'],
+//     birthYear : 1991,
+//     age: function(){
+//         const atulAge = 2021 - this.birthYear;
+//         return atulAge;
+//     }
+// }
+// console.log(atul.fisrtName);
+
+// for(let i=0;i<=9;i++){
+//     if(i <= 4){
+//         console.log(`Lifting weight repitition ${i+1}`);
+//     }else if (i>4 && i<=7){
+//         console.log(`Lifting weight repitition ${i+1}`);
+//         continue;
+//         console.log(`Lifting weight repitition ${i+1}`);
+//     }else{
+//         console.log(`Lifting weight repitition ${i+1}`);
+//         break;
+//         console.log(`Lifting weight repitition ${i+1}`);
+//     }
+
+// }
+
+// const marks = new Array('10','20','30','40');
+// let type = new Array();
+// console.log(marks);
+// for (let i = 0;i<marks.length;i++){
+//     console.log(`Tushar's marks - ${marks[i]}`);
+//     type[i] = typeof marks[i];
+// }
+// console.log(type);
+
+// const arr1 = [10,20,30,40,50];
+// for(let i = (arr1.length - 1);i>=0 ; i--){
+//     console.log(arr1[i]);
+// }
+
+// for(let i = 0; i< arr1.length;i++){
+//     for(let j=i+1;j< arr1.length;j++){
+//         console.log(`${arr1[i]} --- ${arr1[j]}`)
+//     }
+//     console.log(`---------`)
+// }
+
+// let userInput = "";
+
+// function askUser(){
+//     userInput = prompt("Please enter something!");
+//     return userInput;
+// }
+
+// let userInputArrow = () => prompt("Please enter something!");
+
+// do{
+//     console.log(`Hello ${userInputArrow}`);
+// }while(userInputArrow !== "stop");
+
+let calcTip = (billAmount) =>
+  billAmount >= 50 && billAmount <= 200 ? billAmount * 0.15 : billAmount * 0.2;
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+console.log(calcTip(100));
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(bills[i] + tips[i]);
 }
+console.log(totals);
 
-console.log(tushar.calcAge());
-console.log(tushar.age);
-
-console.log(tushar.getSummary())
-
-
-const Mark = {
-    fullName: "Mark Miller",
-    mass: 78,
-    height: 1.69,
-    calcBMI: function(){
-        this.BMI= this.mass / this.height**2;
-        return this.BMI;
-    }
+function calcAverage(arr) {
+  let totalBill = 0;
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    totalBill = totalBill + arr[i];
+  }
+  console.log(totalBill);
+  return totalBill / arr.length;
 }
+console.log(calcAverage(totals));
 
-const John = {
-    fullName: "John Smith",
-    mass: 92,
-    height: 1.95,
-    calcBMI: function(){
-        this.BMI = this.mass / this.height ** 2;
-        return this.BMI;;
-    }
+const tempratures = [-3, -6, 0];
+const tempNew = [];
+// for (let i = 0; i < tempratures.length; i++) console.log(typeof tempratures[i]);
+for (let i = 0; i < tempratures.length; i++) {
+  if (typeof tempratures[i] === 'number') {
+    tempNew.push(tempratures[i]);
+  } else {
+    continue;
+  }
 }
+console.log(tempratures, tempNew);
+const maxTemp = Math.max(...tempNew);
+const minTemp = Math.min(...tempNew);
+console.log(maxTemp, minTemp);
+let tempAmplitude;
+if (maxTemp < 0 && minTemp < 0) {
+  tempAmplitude = maxTemp - minTemp;
+} else if (minTemp < 0 && maxTemp >= 0) {
+  tempAmplitude = maxTemp + minTemp * -1;
+}
+console.log(tempAmplitude);
 
-let higherBMIName;
-let lowerBMIName;
-if(Mark.calcBMI() > John.calcBMI()){
-    higherBMIName = "Mark";
-    lowerBMIName = "John";
-}else{
-    higherBMIName = "John";
-    lowerBMIName = "Mark";
-}
-console.log(`${Mark.calcBMI() > John.calcBMI() ? Mark.fullName : John.fullName}'s BMI (${Mark.BMI > John.BMI ? Mark.calcBMI() : John.calcBMI()}) is higher than ${Mark.BMI > John.BMI ? John.fullName : Mark.fullName}'s (${Mark.BMI > John.BMI ? John.calcBMI() : Mark.calcBMI()})'s `)
+const studentMarks = {
+  studentName: 'Tushar',
+  studentID: '10552610',
+  course: 'M.Sc. Information Systems with Computing',
+  sem1Marks: [60, 75, 89, 73, 60],
+  sem2Marks: [76, 65, 0, 68, 52],
+};
+console.log(studentMarks);
+console.table(studentMarks);
+
+const calcPercentage = function (sem1, sem2) {
+  const marks = sem1.concat(sem2);
+  let totalMarks = 0;
+  for (let i = 0; i < marks.length; i++) totalMarks += marks[i];
+
+  console.log(totalMarks);
+  return totalMarks;
+};
+console.warn(calcPercentage(studentMarks.sem1Marks, studentMarks.sem2Marks));
+
+const printForecast = function (temp) {
+  let stringForcast = '...';
+  for (let i = 0; i < temp.length; i++) {
+    stringForcast += ` ${temp[i]} in ${i + 1} days... `;
+  }
+  return stringForcast;
+};
+
+console.log(printForecast([12, 5, -5, 0, 4]));
