@@ -19,6 +19,7 @@ function checkScore() {
 }
 
 let enteredNumber = 0;
+let highscore = 0;
 const randNumberGenerator = () => Math.floor(Math.random() * 20) + 1;
 let randNumber = randNumberGenerator();
 // alert(randNumber);
@@ -36,30 +37,41 @@ const checkInput = document
         document.querySelector('.highscore').textContent <
         document.querySelector('.score').textContent
       ) {
-        document.querySelector('.highscore').textContent =
-          document.querySelector('.score').textContent;
+        highscore = document.querySelector('.score').textContent;
+        document.querySelector('.highscore').textContent = highscore;
       }
       document.querySelector('.number').textContent = randNumber;
-      document.querySelector('body').style.background = 'green';
+      document.querySelector('body').style.backgroundColor = 'green';
       document.querySelector('.check').disabled = true;
       document.querySelector('.guess').disabled = true;
-    } else if (enteredNumber && enteredNumber < randNumber) {
-      checkScore();
+    } else {
+      //checkScore();
       if (!checkScore()) {
-        document.querySelector('.message').textContent = 'Too Low';
-        document.querySelector('.score').textContent = newScore(
-          document.querySelector('.score').textContent
-        );
-      }
-    } else if (enteredNumber && enteredNumber > randNumber) {
-      checkScore();
-      if (!checkScore()) {
-        document.querySelector('.message').textContent = 'Too High';
+        let toDisplay = enteredNumber < randNumber ? 'Too Low' : 'Too High';
+        document.querySelector('.message').textContent = toDisplay;
         document.querySelector('.score').textContent = newScore(
           document.querySelector('.score').textContent
         );
       }
     }
+
+    // else if (enteredNumber && enteredNumber < randNumber) {
+    //   checkScore();
+    //   if (!checkScore()) {
+    //     document.querySelector('.message').textContent = 'Too Low';
+    //     document.querySelector('.score').textContent = newScore(
+    //       document.querySelector('.score').textContent
+    //     );
+    //   }
+    // } else if (enteredNumber && enteredNumber > randNumber) {
+    //   checkScore();
+    //   if (!checkScore()) {
+    //     document.querySelector('.message').textContent = 'Too High';
+    //     document.querySelector('.score').textContent = newScore(
+    //       document.querySelector('.score').textContent
+    //     );
+    //   }
+    // }
     // else {
     //     alert('Please enter Number between ');
     //   }
@@ -69,17 +81,18 @@ document.querySelector('.again').addEventListener('click', function () {
   //randNumber = Math.floor(Math.random() * 20) + 1;
   randNumber = randNumberGenerator();
   document.querySelector('.number').textContent = '?';
-  if (
-    document.querySelector('.highscore').textContent <
-    document.querySelector('.score').textContent
-  ) {
-    document.querySelector('.highscore').textContent =
-      document.querySelector('.score').textContent;
-  }
+  // if (
+  //   document.querySelector('.highscore').textContent <
+  //   document.querySelector('.score').textContent
+  // ) {
+  //   document.querySelector('.highscore').textContent =
+  //     document.querySelector('.score').textContent;
+  // }
+  document.querySelector('.highscore').textContent = highscore;
   document.querySelector('.score').textContent = 20;
   document.querySelector('.message').textContent = 'Start Guessing...';
   document.querySelector('.guess').value = '';
-  document.querySelector('body').style.background = '#222';
+  document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.check').disabled = false;
   document.querySelector('.guess').disabled = false;
 });
